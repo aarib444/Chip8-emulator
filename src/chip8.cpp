@@ -96,3 +96,96 @@ void Chip8::Cycle() {
 		--soundTimer;
 	}
 }
+
+void Chip8::ExecuteOpcode() {
+        switch(opcode & 0xF000) {
+                case 0x0000:
+                        switch(opcode & 0x00FF) {
+                                case 0x00E0:
+                                        break;
+                                case 0x00EE:
+                                        break;
+                                default:
+
+                        }
+                        break;
+                case 0x1000:
+                        break;
+                case 0x2000:
+                        break;
+                case 0x3000:
+                        break;
+                case 0x4000:
+                        break;
+                case 0x5000:
+                        break;
+                case 0x6000:
+                        break;
+                case 0x7000:
+                        break;
+                case 0x8000:
+                        switch(opcode & 0x000F) {
+                                case 0x0000:
+                                        break;
+                                case 0x0001:
+                                        break;
+                                case 0x0002:
+                                        break;
+                                case 0x0003:
+                                        break;
+                                case 0x0004:
+                                        break;
+                                case 0x0005:
+                                        break;
+                                case 0x0006:
+                                        break;
+                                case 0x0007:
+                                        break;
+                                case 0x000E:
+                                        break;
+                        break;
+                        }
+                case 0x9000:
+                        break;
+                case 0xA000:
+                        break;
+                case 0xB000:
+                        break;
+                case 0xC000:
+                        break;
+                case 0xD000:
+                        break;
+                case 0xE000:
+                        if (opcode & 0x00FF == 0x009E) {
+                                break;
+                        } else if (opcode & 0x00FF == 0x00A1) {
+                                break;
+                        }
+                        break;
+                case 0xF000:
+                        if (opcode & 0x00FF == 0x0007) {
+                                break;
+                        } else if (opcode & 0x00FF == 0x000A) {
+                                break;
+                        } else if (opcode & 0x00FF == 0x0015) {
+                                break;
+                        } else if (opcode & 0x00FF == 0x0018) {
+                                break;
+                        } else if (opcode & 0x00FF == 0x001E) {
+                                break;
+                        } else if (opcode & 0x00FF == 0x0029) {
+                                break;
+                        } else if (opcode & 0x00FF == 0x0033) {
+                                break;
+                        } else if (opcode & 0x00FF == 0x0055) {
+                                break;
+                        } else if (opcode & 0x00FF == 0x0065) {
+                                break;
+                        }
+                        break;
+                default:
+                        std::cout << "Unknown opcode: " << std::hex << opcode << std::endl;
+
+        }
+}
+
