@@ -16,6 +16,9 @@ class Chip8 {
 
 		bool drawFlag;
 
+		std::mt19937 gen;
+		std::uniform_int_distribution<uint8_t> dist;
+
 	private:
 		uint16_t opcode;          // Current Opcode
 		uint8_t memory[4096];    // 4096 bytes memory
